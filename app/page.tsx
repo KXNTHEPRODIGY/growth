@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { ArrowUpRight, Users, TrendingUp, Target, Zap, Globe, BarChart3, UserCheck, Award } from 'lucide-react'
 
 export default function Home() {
@@ -19,10 +20,14 @@ export default function Home() {
             {/* Profile Image */}
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1">
-                <div className="w-full h-full rounded-full bg-dark-800 flex items-center justify-center">
-                  <div className="w-28 h-28 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-                    <span className="text-4xl">👤</span>
-                  </div>
+                <div className="w-full h-full rounded-full overflow-hidden bg-dark-800">
+                  <Image 
+                    src="/profile.png" 
+                    alt="Tener Profile" 
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
               </div>
             </div>
@@ -308,19 +313,13 @@ export default function Home() {
               Ready to scale your Web3 project? Let's discuss how we can drive sustainable growth for your platform.
             </p>
             
-            <div className="flex flex-wrap gap-4 justify-center mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
               <a href="mailto:contact@tener.dev" className="btn-primary">
                 Get in Touch
               </a>
-              <a href="https://x.com/tonhouseofstars" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                View Work
+              <a href="https://x.com/Web3kxn_" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                Connect on X
               </a>
-            </div>
-
-            <div className="border-t border-dark-700 pt-8">
-              <p className="text-dark-400 text-sm">
-                © 2024 Tener | Web3 Growth Portfolio | Built with Next.js & TailwindCSS
-              </p>
             </div>
           </motion.div>
           </div>
