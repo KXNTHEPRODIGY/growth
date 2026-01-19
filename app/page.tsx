@@ -16,25 +16,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* Profile Image */}
-            <div className="mb-8">
-              <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1">
-                <div className="w-full h-full rounded-full overflow-hidden bg-dark-800">
-                  <img 
-                    src="/profile.png" 
-                    alt="Tener Profile" 
-                    className="w-full h-full object-cover rounded-full"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      if (e.currentTarget.parentElement) {
-                        e.currentTarget.parentElement.innerHTML = '<div class="w-full h-full rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center"><span class="text-4xl">👤</span></div>';
-                      }
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
               <span className="gradient-text">Tener</span>
             </h1>
@@ -317,7 +298,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="mailto:tennerrr1@gmail.com" className="btn-primary">
+              <a href="https://t.me/tenertoyourtl" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Get in Touch
               </a>
               <a href="https://x.com/Web3kxn_" target="_blank" rel="noopener noreferrer" className="btn-secondary">
