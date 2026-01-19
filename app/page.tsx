@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Users, TrendingUp, Target, Zap, Globe, BarChart3, Handshake, Award } from 'lucide-react'
+import { ArrowUpRight, Users, TrendingUp, Target, Zap, Globe, BarChart3, UserCheck, Award } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -10,11 +10,11 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/20 to-dark-900"></div>
         <div className="relative container mx-auto px-6 py-24 lg:py-32">
+          <div className="text-center max-w-4xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
           >
             {/* Profile Image */}
             <div className="mb-8">
@@ -48,18 +48,19 @@ export default function Home() {
               </a>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
 
       {/* About / Growth Philosophy */}
       <section className="py-20 bg-dark-800/50">
         <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-8">
               <span className="gradient-text">Growth Philosophy</span>
@@ -72,33 +73,35 @@ export default function Home() {
               measure meticulously, and scale what works.
             </p>
           </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Core Growth Case Studies */}
       <section id="case-studies" className="py-20">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               <span className="gradient-text">Core Growth Case Studies</span>
             </h2>
             <p className="text-dark-300 text-lg">From zero to traction, documented</p>
           </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* TON House of Stars */}
+            <div className="card">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="card"
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-primary-400">TON House of Stars</h3>
@@ -126,7 +129,7 @@ export default function Home() {
                 <h4 className="font-semibold text-dark-100 mb-2">Growth Strategies:</h4>
                 <ul className="space-y-2 text-dark-300">
                   <li className="flex items-start">
-                    <Handshake className="w-4 h-4 text-primary-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <UserCheck className="w-4 h-4 text-primary-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span><strong>Strategic Partnerships:</strong> Forged key collaborations with top TON ecosystem projects</span>
                   </li>
                   <li className="flex items-start">
@@ -159,14 +162,15 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+            </div>
 
             {/* Nest Wallet */}
+            <div className="card">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="card"
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-primary-400">Nest Wallet</h3>
@@ -216,6 +220,7 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -223,17 +228,18 @@ export default function Home() {
       {/* Growth Skill Stack */}
       <section className="py-20 bg-dark-800/50">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               <span className="gradient-text">Growth Skill Stack</span>
             </h2>
           </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
@@ -253,7 +259,7 @@ export default function Home() {
                 description: "Utilizing blockchain data to identify opportunities and optimize campaigns"
               },
               {
-                icon: Handshake,
+                icon: UserCheck,
                 title: "Partnerships & BD-Driven Distribution",
                 description: "Forging strategic alliances to unlock new distribution channels"
               },
@@ -268,18 +274,18 @@ export default function Home() {
                 description: "Testing and scaling growth initiatives with data-driven iteration"
               }
             ].map((skill, index) => (
+              <div key={index} className="card text-center">
               <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="card text-center"
               >
                 <skill.icon className="w-8 h-8 text-primary-400 mx-auto mb-4" />
                 <h3 className="font-semibold text-dark-100 mb-2">{skill.title}</h3>
                 <p className="text-sm text-dark-300">{skill.description}</p>
               </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -288,12 +294,12 @@ export default function Home() {
       {/* Contact / Proof of Work */}
       <section id="contact" className="py-20">
         <div className="container mx-auto px-6">
+          <div className="text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-8">
               <span className="gradient-text">Let's Build Together</span>
@@ -317,6 +323,7 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
     </div>
